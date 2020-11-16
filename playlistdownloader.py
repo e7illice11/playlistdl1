@@ -7,11 +7,8 @@ import shutil
 import subprocess
 import os
 import zipfile
-import datetime as dt
 
 os.system('color')
-
-now = dt.datetime.now()
 
 COLOR = {
     "HEADER": "\033[95m",
