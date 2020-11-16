@@ -90,3 +90,4 @@ if download == 'Y':
         sys.exit()
 else:
     pass
+sys.exit()
