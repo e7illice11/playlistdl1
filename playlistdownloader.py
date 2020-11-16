@@ -24,16 +24,9 @@ COLOR = {
 
 print('The playlist' +  COLOR['RED'], 'MIGHT' + COLOR['ENDC'], 'not download correctly with private or deleted videos.')
 url = input('What playlist do you want to save?: ')
-download = input('Do you want to download the playlist? (type Y/N): ')
-if download not in ('Y', 'N'):
-    while True:
-        download = input('Do you want to download the playlist? (type Y/N): ')
-        if download not in ('Y', 'N'):
-            continue
-        else:
-            break
-else:
-    pass
+download = input('Do you want to download the playlist? (type Y/N): ').upper()
+while download not in ('Y', 'N'):
+        download = input('Do you want to download the playlist? (type Y/N): ').upper()
 
 # makes a dict of playlist metadata
 try:
@@ -88,6 +81,4 @@ if download == 'Y':
         print(COLOR['RED'], 'Exiting.')
         time.sleep(2)
         sys.exit()
-else:
-    pass
 sys.exit()
